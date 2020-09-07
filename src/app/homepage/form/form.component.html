@@ -1,0 +1,15 @@
+<div class="container-form" [formGroup]="form">
+    <img class="img-position" src="assets/img/Topo.svg">
+    <img class="img-bottom" src="assets/img/0aa2.png">
+
+    <div fxLayout="column" class="format-group ">
+        <span class="questions-format slide-up">Para começar, precisamos saber o seu nome:</span>
+        <br>
+        <input formControlName='name' placeholder="Digite o seu nome...">
+        <br>
+        <button>
+            Continuar
+            <mat-icon class="icon">east</mat-icon>
+        </button>
+    </div>
+</div>

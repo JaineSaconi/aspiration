@@ -1,0 +1,93 @@
+<div class="container-form">
+  <img class="img-position" src="assets/img/Topo.svg">
+  <img class="img-bottom" src="assets/img/0aa2.png">
+  <img class="img-folha" src="assets/img/FolhaCortada.svg">
+  <img class="img-as" src="assets/img/AScortado.svg">
+
+  <div fxLayout="column" class="format-group ">
+
+    <span class="q1" *ngIf=" 1 >= question">Com que frequência você</span>
+    <span class="q2" *ngIf=" 1 >= question">Sentido insonia e fadiga??</span>
+
+    <span class="q1" *ngIf="question === 2">Pessoa, você tem sentindo que</span>
+    <span class="q2" *ngIf="question === 2">Não gosta das mesmas coisas que antes?</span>
+
+    <span class="q1" *ngIf="question === 3">Pessoa, você anda tendo </span>
+    <span class="q2" *ngIf="question === 3">Dificuldade para relaxar?</span>
+
+    <span class="q1" *ngIf="question === 4">Com que frequência tem sentido</span>
+    <span class="q2" *ngIf="question === 4">Dor nos músculos do ombro e pescoço?</span>
+
+    <span class="q1" *ngIf="question === 5">Pessoa, você tem tido</span>
+    <span class="q2" *ngIf="question === 5">Dores de cabeça por tensão?</span>
+
+    <span class="q1" *ngIf="question === 6">Ultimamente você tem achado que</span>
+    <span class="q2" *ngIf="question === 6">Não consegue se divertir e dar risadas?</span>
+
+    <span class="q1" *ngIf="question === 7">Com que frequência você tem</span>
+    <span class="q2" *ngIf="question === 7">tem sentido nervosismo?</span>
+
+    <span class="q1" *ngIf="question === 8">Ultimamente voce anda</span>
+    <span class="q2" *ngIf="question === 8">Se sentindo muito cansado?</span>
+
+    <span class="q1" *ngIf="question === 9">Ultimamente, voce tem tido</span>
+    <span class="q2" *ngIf="question === 9">Preocupações excessivas?</span>
+
+    <span class="q1" *ngIf="question === 10">Marlon, você tem sentido que</span>
+    <span class="q2" *ngIf="question === 10">Não se sente alegre a maior parte do tempo? </span>
+
+    <span class="q1" *ngIf="question === 11">Marlon, você tem sentido que</span>
+    <span class="q2" *ngIf="question === 11">Dificuldade para respirar?</span>
+
+    <span class="q1" *ngIf="question === 12">Na sua percepção, voce tem tido</span>
+    <span class="q2" *ngIf="question === 12">Dificuldade de concentração?</span>
+
+    <span class="q1" *ngIf="question === 13">Marlon, com que frequência você tem</span>
+    <span class="q2" *ngIf="question === 13">Sentido perda de apetite?</span>
+
+    <span class="q1" *ngIf="question === 14">Ultimamente tem achado que</span>
+    <span class="q2" *ngIf="question === 14">Perdeu o interesse de cuidar da aparência?</span>
+
+    <span class="q1" *ngIf="question === 15">Anda sentindo medo que</span>
+    <span class="q2" *ngIf="question === 15">Algo de ruim aconteça?</span>
+
+
+    <span class="q1" *ngIf="question === 16">Marlon, você tem sentido</span>
+    <span class="q2" *ngIf="question === 16">Muito sono durante o dia?</span>
+
+    <span class="q1" *ngIf="question === 17">Voce tem ficado com</span>
+    <span class="q2" *ngIf="question === 17">Mãos e pés frios e suados?</span>
+
+    <span class="q1" *ngIf="question === 18">Você tem conseguido sentir prazer ao </span>
+    <span class="q2" *ngIf="question === 18">Assistir tv, ouvir rádio ou ler?</span>
+
+
+    <span class="q1" *ngIf="question === 19">Você tem sentido seu</span>
+    <span class="q2" *ngIf="question === 19">Coração bater de forma estranha?</span>
+
+    <span class="q1" *ngIf="question === 19">Marlon, ultimamente as coisas andam te causando</span>
+    <span class="q2" *ngIf="question === 20">Muita irritação?</span>
+
+    <div>
+      <button class="btns" (click)="answer(3)">quase sempre</button>
+      <button class="btns" (click)="answer(2)">muitas vezes</button>
+      <button class="btns" (click)="answer(1)">poucas vezes</button>
+      <button class="btns" (click)="answer(0)">nunca</button>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+    <button class="btn-bottom" (click)="return()">
+      <mat-icon>keyboard_backspace</mat-icon>
+      <span> Pergunta anterior </span>
+    </button>
+  </div>
+  <div class="progress">
+    <span>0%</span>
+    <div class="progress-bar"></div>
+  </div>
+</div>
+
+<app-result *ngIf="question == 21" [result]="result" [xQuestionAir]="xQuestionAir" [xQuestionFire]="xQuestionFire"
+  [xQuestionEarth]="xQuestionEarth" [xQuestionWater]="xQuestionWater"></app-result>
