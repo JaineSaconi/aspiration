@@ -35,6 +35,7 @@
     "ngx-virtual-scroller": "^4.0.3",
     "normalize.css": "^8.0.1",
     "require": "^2.4.20",
+    "reset-css": "^5.0.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
