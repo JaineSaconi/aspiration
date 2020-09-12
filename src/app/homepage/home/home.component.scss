@@ -40,11 +40,15 @@
 .header ul li{
     display: inline;
     text-decoration: underline;
-    font: normal normal 600 1.31em/1.75em;
+    font-size: 1.31em;
     color: #465F5C;
-    margin-top: 1.5em;
-    margin-right: 2em;
+    margin: 0em 2em 0 2em;
     font-family: 'Open Sans', 'arial', sans-serif;
+    font-weight: bold; 
+}
+
+.header ul button {
+    margin-left: 2em ;
 }
 
 .btn-home {
@@ -60,7 +64,7 @@
 }
 
 .bloco-1 {
-    margin-top: 8em;
+    margin-top: 17.7em;
     margin-left: 3.5em;
     position: absolute;
     width: 58.813em;
@@ -88,18 +92,85 @@
 
 .btn-2 {
     margin-top: 2.5em;
+    box-shadow: 0.5em 0.5em rgba(70, 95, 92, 0.5);
+}
+
+.btn-saiba-mais {
+    background-color: transparent;
+    border-color: transparent;
+    color: #DD4737;
+    //font-size: 1.750em;
+    text-decoration: underline;
+    font: oblique normal 300 28px/35px Futura PT;
+    margin-top: 9.5em ;
 }
 
 .bloco-2 {
-    margin-top: 9.75em;
-    margin-left: 33em;
+    margin-top: 5.75em;
+    float: right;
+    margin-right: 0em;
     height: 65.938em;
+}
+
+.bloco-3 {
+    margin-top: -1em;
+    display: inline-flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    padding: 3.5em;
+}
+
+.img-aspiracao-fundo {
+    margin-left: 3.5em;
+    width: 113.000em;
+    margin-top: 10.375em;
+    z-index: 1;
+}
+
+.img-linhas-vermelhas {
+   margin-left:10.313em ;
+   z-index: 2;
+}
+
+.img-aspiracao-verde {
+    margin-left: 11em;
+    z-index: 3;
+}
+
+.text-branco {
+    display: block;
+    width: 56.500em;
+    height: 31em;
+    background-color: white;
+    margin-left: 3.5em;
+    position: relative;
+    border-radius: 1em;
+    padding: 3.438em 7.5em;
+}
+
+.text-branco span {
+    color: #DD4737;
+    font-family: 'Open Sans';
+    font-size: 2.375em;
+    font-weight: bold; 
+    text-align: right;
+}
+
+.text-branco p {
+    margin-top: 2em ;
+    text-align: left;
+    line-break: auto;
+    font-size: 1.313em;
+    line-height:2em;
+    color: #465F5C;
+    font-family: 'Open Sans';
 }
 
 .footer{
     width: 100%;
     height: 24.375em;
-    margin-top: 110.5em;
+    margin-top: 8.2em;
     padding-left: 11em;
     padding-right: 11em;
     background-color: #465F5C;
@@ -111,6 +182,10 @@
     margin-top: 7.563em;
     height: 9.299em;
     width: 40.250em;
+}
+
+.footer nav {
+    margin-right: 30em;
 }
 
 .footer ul {
@@ -126,6 +201,7 @@
     color: white;
     font: normal normal 600;
     font-size: 1.31em/1.75em;
+    font-weight: bold; 
     margin: 1em 0 1em 0;
     font-family: 'Open Sans', 'arial', sans-serif;
 }
