@@ -1,3 +1,4 @@
+import { ScrollDirective } from './result/scroll-directive';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
@@ -31,9 +32,9 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatIconModule,
     MatInputModule,
     VirtualScrollerModule,
-    RouterModule,
+    RouterModule
   ],
-  declarations: [ResultComponent, QuestionComponent, HomeComponent, FormComponent],
+  declarations: [ResultComponent, QuestionComponent, HomeComponent, FormComponent, ScrollDirective ],
   providers: [
     ResultComponent,
   ]
