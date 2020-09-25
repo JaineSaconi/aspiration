@@ -17,7 +17,6 @@ import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
-
 @NgModule({
   imports: [
     ScrollingModule,

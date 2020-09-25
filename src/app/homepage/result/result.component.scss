@@ -84,3 +84,60 @@
     color: #465F5C;
     font-size: 1.75em;
 }
+
+.c2 {
+    margin-top: 3em;
+}
+
+.titulo {
+    color: #F8F7F5;
+    font-size: 2.375em;
+    font-family: 'FuturaPT', 'arial', sans-serif;
+}
+
+.text-size {
+    height: 17.438em;
+    background-color: white;
+    margin-top: 1em;
+    border-radius: 1em;
+    padding: 1.5em;   
+    display: flex; 
+}
+
+.text {
+    text-align: left;
+    font-family: 'Open Sans';
+    font-size: 1.313em;
+    color: #465F5C;
+    height: 1.5em ;
+    line-height: 2em;
+    position: absolute;
+}
+
+.btn-ler-mais {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    font-size: 1.750em;
+    color:#465F5C;
+    padding: 0em;
+    width: 7.938em;
+    text-align: left;
+    font-family: 'FuturaPT';
+}
+
+.c3 {
+    margin-top: 5.000em;
+}
+
+.align-img {
+    align-items: center;
+    display: inline;
+}
+
+.img-pod {
+    background-color: white;
+    border-radius: 1em;
+    height: 26.813em;
+    width: 20.938em;
+}

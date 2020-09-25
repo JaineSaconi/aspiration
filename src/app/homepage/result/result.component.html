@@ -4,13 +4,40 @@
     <img class="img-as" src="assets/img/AScortado.svg">
 
     <div class="align">
-        <div class="container-result">
+        <div class="container-result" fxLayout="column">
             <div class="header">
                 <div class="header-1">
-                    <span class="small-text">Pessoa, você precisa da</span>                   
+                    <span class="small-text">Pessoa, você precisa da</span>
+
                     <button class="btn-receber">Receber no e-mail</button>
                 </div>
                 <span class="big-text">sintonia {{ resultFinal }}</span>
+            </div>
+
+            <div class="c2">
+                <span class="titulo">O que esta desalinhado?</span>
+                <div class="text-size" fxLayout="column">
+                    <div class="text">
+                        <p>Insegurança, medo, solidão e instabilidade</p>
+                        <p>Sua jornada, neste momento emocional, apontou que seu elemento predominante é TERRA.</p>
+                        <p> Integrar cabeça, coração e colocar as mãos na massa.
+                            É sair do mundo das ideias e partir para a prática, fazer-se acontecer. Comprometimento.
+                            Deixar o sentimento e motivação emergir e
+                        </p>
+                        <button class="btn-ler-mais" (click)="expand()">
+                            Ler mais
+                            <mat-icon>arrow_right_alt</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="c3">
+                <span class="titulo">Produtos para você sintonizar</span>
+                <div class="align-img">
+                    <div class="img-pod"></div>
+                    <div class="img-pod"></div>
+                    <div class="img-pod"></div>
+                </div>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-result',
@@ -19,10 +19,14 @@ export class ResultComponent implements OnInit {
   ar = 'de ar';
   terra = 'de terra';
   agua = 'de água';
+  ponto: boolean;
 
-  constructor() { }
+  constructor(
+    private cdRef: ChangeDetectorRef,
+  ) { }
 
   ngOnInit(): void {
+  this.ponto = false;
 
     if (this.result == 1)
       this.resultFinal = this.ar;
@@ -131,6 +135,12 @@ export class ResultComponent implements OnInit {
         this.resultFinal = this.terra;
     }
 
+  }
+
+  expand(): void {
+    this.ponto === false ? true : false ;
+    this.cdRef.detectChanges();
+    this.cdRef.markForCheck();
   }
 
 }

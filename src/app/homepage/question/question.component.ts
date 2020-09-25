@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class QuestionComponent {
 
 
-  question = 1;
+  question = 19;
   air = 0;
   fire = 0;
   water = 0;
