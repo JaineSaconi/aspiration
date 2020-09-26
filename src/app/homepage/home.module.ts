@@ -17,6 +17,7 @@ import { QuestionComponent } from './question/question.component';
 import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatIconModule,
     MatInputModule,
     VirtualScrollerModule,
-    RouterModule
+    RouterModule,
+    MatDividerModule,
   ],
   declarations: [ResultComponent, QuestionComponent, HomeComponent, FormComponent, ScrollDirective ],
   providers: [

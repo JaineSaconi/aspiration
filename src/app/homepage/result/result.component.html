@@ -10,10 +10,12 @@
                     <div class="header-1">
                         <span class="small-text">Pessoa, você precisa da</span>
 
-                        <button class="btn-receber">Receber no e-mail</button>
+                        <button>Receber no e-mail</button>
                     </div>
                     <span class="big-text">sintonia {{ resultFinal }}</span>
                 </div>
+
+                <mat-divider class="divider"></mat-divider>
 
                 <div class="c2">
                     <span class="titulo">O que esta desalinhado?</span>
@@ -40,9 +42,15 @@
                         <div class="img-pod"></div>
                     </div>
                 </div>
-                <div class="c3 c4" fxLayout="column">
+                <div class="c3" fxLayout="column">
                     <span class="titulo">Receber no e-mail</span>
-                    <span class="text-email"> Receba o seu resultado por e-mail com todos os detalhes sobre a sua sintonia e como a Aspiração pode te ajudar! </span>
+                    <span class="text-email"> Receba o seu resultado por e-mail com todos os detalhes sobre a sua
+                        sintonia e como a Aspiração pode te ajudar! </span>
+
+                    <div class="c3 c5">
+                        <input formControlName='name' placeholder="Digite seu e-mail...">
+                        <button>Enviar</button>
+                    </div>
                 </div>
             </div>
         </div>
