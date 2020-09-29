@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 export class QuestionComponent {
 
 
-  question = 19;
+  question = 1;
   air = 0;
   fire = 0;
   water = 0;
@@ -26,32 +26,37 @@ export class QuestionComponent {
 
   answer(answerCliked: number): void {
 
-    if (this.question === 1 || this.question === 5 || this.question === 9 || this.question === 13 || this.question === 17) {
-      this.air += answerCliked;
-
-      if (this.question === 5)
-        this.xQuestionAir = answerCliked;
+    if (this.question < 6) {
+      if (this.question === 1) {
+        this.xQuestionAir = answerCliked === 3 ? 4 : answerCliked;
+        this.air += answerCliked === 3 ? 4 : answerCliked;
+      }
+      else
+        this.air += answerCliked;
     }
 
-    if (this.question === 2 || this.question === 6 || this.question === 10 || this.question === 14 || this.question === 18) {
-      this.fire += answerCliked;
-
-      if (this.question === 10)
-        this.xQuestionFire = answerCliked;
+    if (this.question > 5 && this.question < 11) {
+      if (this.question === 8) {
+        this.xQuestionFire = answerCliked === 3 ? 4 : answerCliked;
+        this.fire += answerCliked === 3 ? 4 : answerCliked;
+      } else
+        this.fire += answerCliked;
     }
 
-    if (this.question === 3 || this.question === 7 || this.question === 11 || this.question === 15 || this.question === 19) {
-      this.water += answerCliked;
-
-      if (this.question === 11)
-        this.xQuestionWater = answerCliked;
+    if (this.question > 10 && this.question < 16) {
+      if (this.question === 13) {
+        this.xQuestionWater = answerCliked === 3 ? 4 : answerCliked;
+        this.water += answerCliked === 3 ? 4 : answerCliked;
+      } else
+        this.water += answerCliked;
     }
 
-    if (this.question === 4 || this.question === 8 || this.question === 12 || this.question === 16 || this.question === 20) {
-      this.earth += answerCliked;
-
-      if (this.question === 8)
-        this.xQuestionEarth = answerCliked;
+    if (this.question > 15 && this.question < 21) {
+      if (this.question === 17) {
+        this.xQuestionEarth = answerCliked === 3 ? 4 : answerCliked;
+        this.earth += answerCliked === 3 ? 4 : answerCliked;
+      } else
+        this.earth += answerCliked;
     }
 
     this.answerNow = answerCliked;
@@ -98,7 +103,6 @@ export class QuestionComponent {
       else if ((this.air == this.earth) && (this.air > this.fire) && (this.air > this.water) && (this.earth > this.fire) && (this.earth > this.water))
         this.result = 10; // ansiedade == cansaço
 
-
       else if (this.fire == this.air && this.fire == this.water && this.fire > this.earth)
         this.result = 11; // depressão = ansiedade = stress
 
@@ -113,8 +117,6 @@ export class QuestionComponent {
 
       else if (this.fire == this.air && this.fire == this.earth && this.fire == this.water)
         this.result = 15; // stress = ansiedade = cansaço = depressão
-
-      this.question = 21;
     }
 
   }
@@ -123,17 +125,35 @@ export class QuestionComponent {
     this.question--;
 
     if (this.question != 0) {
-      if (this.question === 1 || this.question === 5 || this.question === 9 || this.question === 13 || this.question === 17)
-        this.air = this.air === 0 ? 0 : this.air - this.answerNow;
+      if (this.question < 6) {
+        if (this.question === 1 && this.answerNow === 3)
+          this.air = this.air - 4;
+        else
+          this.air = this.air === 0 ? 0 : this.air - this.answerNow;
+      }
 
-      if (this.question === 2 || this.question === 6 || this.question === 10 || this.question === 14 || this.question === 18)
-        this.fire = this.fire === 0 ? 0 : this.fire - this.answerNow;
+      if (this.question > 5 && this.question < 11) {
+        if (this.question === 8 && this.answerNow === 3)
+          this.fire = this.fire - 4;
+        else
+          this.fire = this.fire === 0 ? 0 : this.fire - this.answerNow;
+      }
 
-      if (this.question === 3 || this.question === 7 || this.question === 11 || this.question === 15 || this.question === 19)
-        this.water = this.water === 0 ? 0 : this.water - this.answerNow;
+      if (this.question > 10 && this.question < 16) {
 
-      if (this.question === 4 || this.question === 8 || this.question === 12 || this.question === 16 || this.question === 20)
-        this.earth = this.earth === 0 ? 0 : this.earth - this.answerNow;
+        if (this.question === 13 && this.answerNow === 3)
+          this.water = this.water - 4;
+        else
+          this.water = this.water === 0 ? 0 : this.water - this.answerNow;
+      }
+
+      if (this.question > 15 && this.question < 21) {
+        if (this.question === 17 && this.answerNow === 3)
+          this.earth = this.earth - 4;
+        else
+          this.earth = this.earth === 0 ? 0 : this.earth - this.answerNow;
+      }
+
     } else {
       this.question = 1;
     }
