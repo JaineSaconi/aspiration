@@ -1,15 +1,26 @@
-<div class="container-form" [formGroup]="form">
+<div class="container-form" [formGroup]="form" *ngIf="qst !== 3">
     <img class="img-position" src="assets/img/Topo.svg">
     <img class="img-bottom" src="assets/img/0aa2.png">
 
-    <div fxLayout="column" class="format-group ">
-        <span class="questions-format slide-up">Para começar, precisamos saber o seu nome:</span>
+    <div fxLayout="column" class="format-group" [formGroup]="form">
+        <span *ngIf="qst === 1" class="questions-format slide-up">Para começar, precisamos saber o seu nome:</span>
         <br>
-        <input formControlName='name' placeholder="Digite o seu nome...">
+        <input *ngIf="qst === 1" formControlName='name' placeholder="Digite o seu nome..." formControlName="name" #name>
         <br>
-        <button>
+        <span *ngIf="qst === 2" class="questions-format slide-up">ola {{ nome }}! Qual a sua idade?</span>
+        <br>
+        <input *ngIf="qst === 2" formControlName='name' placeholder="Digite sua idade..." formControlName="age" #age>
+        <br>
+
+        <button (click)="next()" *ngIf="qst === 1 || qst === 2">
             Continuar
             <mat-icon class="icon">east</mat-icon>
         </button>
-    </div>
+
+        <!-- <button *ngIf="qst === 2" routerLink="/form/question">
+            Continuar
+            <mat-icon class="icon">east</mat-icon>
+        </button> -->       
+    </div>   
 </div>
+<app-question *ngIf="qst === 3" [nome]="nome"></app-question>

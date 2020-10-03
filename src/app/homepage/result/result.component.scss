@@ -92,7 +92,7 @@
 }
 
 .text-size {
-    height: 17.438em;
+    
     background-color: white;
     margin-top: 1em;
     border-radius: 1em;
@@ -100,15 +100,35 @@
     display: flex; 
 }
 
+.text-size-hidden {
+    height: 17.438em;
+}
+.text-size-expand {
+    height: 50em;
+}
 .text {
     text-align: left;
     font-family: 'Open Sans';
     font-size: 1.313em;
     color: #465F5C;
     height: 1.5em ;
-    line-height: 2em;
-    position: absolute;
+    line-height: 2em; 
+    position: absolute;   
 }
+
+.text p {
+    line-break: auto;
+}
+
+.hidden-text {
+    height: 2.6em;
+    overflow: hidden;
+}
+
+.show-text {
+    height: 30em;
+}
+
 
 .btn-ler-mais {
     position: absolute;

@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-question',
@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class QuestionComponent {
 
-
+  @Input() nome: string;
   question = 1;
   air = 0;
   fire = 0;
@@ -25,7 +25,7 @@ export class QuestionComponent {
   constructor() { }
 
   answer(answerCliked: number): void {
-
+    this.question = 20;
     if (this.question < 6) {
       if (this.question === 1) {
         this.xQuestionAir = answerCliked === 3 ? 4 : answerCliked;
