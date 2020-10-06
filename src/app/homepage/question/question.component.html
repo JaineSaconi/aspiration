@@ -10,7 +10,7 @@
     <span class="q2" *ngIf="1 >= question">Dores de cabeça por tensão?</span>
 
     <span class="q1" *ngIf="question === 2">Com que frequência você</span>
-    <span class="q2" *ngIf="question === 2">Sentido insonia e fadiga??</span>
+    <span class="q2" *ngIf="question === 2">Sentido insonia e fadiga?</span>
 
     <span class="q1" *ngIf="question === 3">Ultimamente, voce tem tido</span>
     <span class="q2" *ngIf="question === 3">Preocupações excessivas?</span>
@@ -25,22 +25,22 @@
     <span class="q2" *ngIf="question === 6">Não gosta das mesmas coisas que antes?</span>
 
     <span class="q1" *ngIf="question === 7">Ultimamente você tem achado que</span>
-    <span class="q2" *ngIf="question === 7">Não consegue se divertir e dar risadas?</span>
+    <span class="q2" *ngIf="question === 7"> Não consegue mais dar risadas e se divertir quando vê coisas engraçadas?</span>
 
     <span class="q1" *ngIf="question === 8">{{ nome }}, você tem sentido que</span>
     <span class="q2" *ngIf="question === 8">Não se sente alegre a maior parte do tempo? </span>
 
     <span class="q1" *ngIf="question === 9">Ultimamente tem achado que</span>
-    <span class="q2" *ngIf="question === 9">Perdeu o interesse de cuidar da aparência?</span>
+    <span class="q2" *ngIf="question === 9">Perdeu o interesse em cuidar da aparência?</span>
 
     <span class="q1" *ngIf="question === 10">Você tem conseguido sentir prazer ao </span>
-    <span class="q2" *ngIf="question === 10">Assistir tv, ouvir rádio ou ler?</span>
+    <span class="q2" *ngIf="question === 10">Assistir tv, ir ao cinema ou ler?</span>
 
     <span class="q1" *ngIf="question === 11">{{ nome }}, você anda tendo </span>
     <span class="q2" *ngIf="question === 11">Dificuldade para relaxar?</span>
 
-    <span class="q1" *ngIf="question === 12">Com que frequência você tem</span>
-    <span class="q2" *ngIf="question === 12">tem sentido nervosismo?</span>
+    <span class="q1" *ngIf="question === 12">Com que frequência você </span>
+    <span class="q2" *ngIf="question === 12">Tem sentido nervosismo?</span>
 
     <span class="q1" *ngIf="question === 13">{{ nome }}, você tem sentido que</span>
     <span class="q2" *ngIf="question === 13">Dificuldade para respirar?</span>
@@ -52,10 +52,10 @@
     <span class="q2" *ngIf="question === 15">Coração bater de forma estranha?</span>
 
     <span class="q1" *ngIf="question === 16">Com que frequência tem sentido</span>
-    <span class="q2" *ngIf="question === 16">Dor nos músculos do ombro e pescoço?</span>
+    <span class="q2" *ngIf="question === 16">Dor nos músculos do pescoço e ombros?</span>
     
     <span class="q1" *ngIf="question === 17">Ultimamente voce anda</span>
-    <span class="q2" *ngIf="question === 17">Se sentindo muito cansado?</span>
+    <span class="q2" *ngIf="question === 17">Se sentindo muito cansada(o)?</span>
 
     <span class="q1" *ngIf="question === 18">Na sua percepção, voce tem tido</span>
     <span class="q2" *ngIf="question === 18">Dificuldade de concentração?</span>
@@ -68,7 +68,7 @@
 
     <div>
       <button class="btns" (click)="answer(3)">quase sempre</button>
-      <button class="btns" (click)="answer(2)">muitas vezes</button>
+      <button class="btns" (click)="answer(2)">várias vezes</button>
       <button class="btns" (click)="answer(1)">poucas vezes</button>
       <button class="btns" (click)="answer(0)">nunca</button>
     </div>
@@ -82,8 +82,9 @@
     </button>
   </div>
   <div class="progress">
-    <span>0%</span>
-    <div class="progress-bar"></div>
+    <span class="align">{{ percent }}%</span>
+    <div class="progress-bar progress-bar-load" id="progressBar"></div>
+    <div class="progress-bar pro-color"></div>
   </div>
 </div>
 

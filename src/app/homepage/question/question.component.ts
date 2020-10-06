@@ -1,4 +1,5 @@
 
+import { ngModuleJitUrl } from '@angular/compiler';
 import { Component, Input, ViewChild } from '@angular/core';
 
 @Component({
@@ -9,6 +10,7 @@ import { Component, Input, ViewChild } from '@angular/core';
 export class QuestionComponent {
 
   @Input() nome: string;
+
   question = 1;
   air = 0;
   fire = 0;
@@ -19,13 +21,13 @@ export class QuestionComponent {
   xQuestionFire = 0;
   xQuestionEarth = 0;
   xQuestionWater = 0;
+  percent = 0;
 
   result = 0;
 
   constructor() { }
 
   answer(answerCliked: number): void {
-    this.question = 20;
     if (this.question < 6) {
       if (this.question === 1) {
         this.xQuestionAir = answerCliked === 3 ? 4 : answerCliked;
@@ -61,10 +63,6 @@ export class QuestionComponent {
 
     this.answerNow = answerCliked;
     this.question++;
-    console.log('ar', this.air);
-    console.log('fogo', this.fire);
-    console.log('agua', this.water);
-    console.log('terra', this.earth);
 
     // fire = depressão
     // air = ansiedade
@@ -83,7 +81,6 @@ export class QuestionComponent {
 
       else if ((this.earth > this.fire) && (this.earth > this.water) && (this.earth > this.air))
         this.result = 4; // cançaso
-
 
       else if ((this.water == this.air) && (this.water > this.fire) && (this.water > this.earth) && (this.air > this.fire) && (this.air > this.earth))
         this.result = 5; // stress == ansiedade
@@ -118,6 +115,8 @@ export class QuestionComponent {
       else if (this.fire == this.air && this.fire == this.earth && this.fire == this.water)
         this.result = 15; // stress = ansiedade = cansaço = depressão
     }
+
+    this.progressBar();
 
   }
 
@@ -158,10 +157,111 @@ export class QuestionComponent {
       this.question = 1;
     }
 
-    console.log('question: ', this.question);
-    console.log('ar', this.air);
-    console.log('fogo', this.fire);
-    console.log('agua', this.water);
-    console.log('terra', this.earth);
+    this.progressBar();
+
+  }
+
+  progressBar(): void {
+    switch (this.question) {
+      case 1:
+        document.getElementById("progressBar").style.width = "2.18em";
+        this.percent = 5;
+        break;
+
+      case 2:
+        document.getElementById("progressBar").style.width = "4.205em";
+        this.percent = 10;
+        break;
+
+      case 3:
+        document.getElementById("progressBar").style.width = "6.385em";
+        this.percent = 15;        
+        break;
+
+      case 4:
+        document.getElementById("progressBar").style.width = "8.565em";
+        this.percent = 20;
+        break;
+
+      case 5:
+        document.getElementById("progressBar").style.width = "10.748em";
+        this.percent = 25;
+        break;
+
+      case 6:
+        document.getElementById("progressBar").style.width = "12.925em";
+        this.percent = 30;
+        break;
+
+      case 7:
+        document.getElementById("progressBar").style.width = "15.105em";
+        this.percent = 35;
+        break;
+
+      case 8:
+        document.getElementById("progressBar").style.width = "17.285em";
+        this.percent = 40;
+        break;
+
+      case 9:
+        document.getElementById("progressBar").style.width = "19.465em";
+        this.percent = 45;
+        break;
+
+      case 10:
+        document.getElementById("progressBar").style.width = "21.645em";
+        this.percent = 50;
+        break;
+
+      case 11:
+        document.getElementById("progressBar").style.width = "23.825em";
+        this.percent = 55;
+        break;
+
+      case 12:
+        document.getElementById("progressBar").style.width = "24em";
+        this.percent = 60;
+        break;
+
+      case 13:
+        document.getElementById("progressBar").style.width = "26.185em";
+        this.percent = 65;
+        break;
+
+      case 14:
+        document.getElementById("progressBar").style.width = "28.365em";
+        this.percent = 70;
+        break;
+
+      case 15:
+        document.getElementById("progressBar").style.width = "30.545em";
+        this.percent = 75;
+        break;
+
+      case 16:
+        document.getElementById("progressBar").style.width = "32.725em";
+        this.percent = 80;
+        break;
+       
+      case 17:
+        document.getElementById("progressBar").style.width = "37.085em";
+        this.percent = 85;
+        break;
+
+      case 18:
+        document.getElementById("progressBar").style.width = "39.525em";
+        this.percent = 90;
+        break;
+
+      case 19:
+        document.getElementById("progressBar").style.width = "41.445em";
+        this.percent = 95;
+        break;
+
+      case 20:
+        document.getElementById("progressBar").style.width = "43.625em";
+        this.percent = 100;
+        break;
+    }
   }
 }

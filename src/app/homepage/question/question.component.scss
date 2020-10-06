@@ -17,7 +17,7 @@
 .img-bottom {
    position: fixed;
    height: 100%;
-   width: 50%;
+   width: 100%;
 }
 
 .img-folha {
@@ -104,14 +104,27 @@
      position: fixed;
  }
 
+ .align {
+     margin-left: 50%;
+ }
+
  .progress span {
      align-self: center;
+ }
+
+ .pro-color {
+    background-color: #465F5C;
+    opacity: 0.2;
  }
 
  .progress-bar {
     width: 43.625em;
     height: 1em;
-    background-color: #465F5C;
-    opacity: 0.2;
     border-radius: 1em;
+ }
+
+ .progress-bar-load {
+     background-color: #465F5C;
+     width: 1em;
+     position: absolute;
  }

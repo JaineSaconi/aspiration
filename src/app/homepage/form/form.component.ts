@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { QuestionComponent } from '../question/question.component';
 
 @Component({
@@ -18,7 +18,7 @@ export class FormComponent implements OnInit {
 
   constructor() {
     this.form = new FormGroup ({
-      name: new FormControl(null),
+      name: new FormControl(null, [Validators.required, Validators.maxLength(50)]),
       age: new FormControl(null),
     });
    }

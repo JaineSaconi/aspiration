@@ -5,7 +5,10 @@
     <div fxLayout="column" class="format-group" [formGroup]="form">
         <span *ngIf="qst === 1" class="questions-format slide-up">Para começar, precisamos saber o seu nome:</span>
         <br>
-        <input *ngIf="qst === 1" formControlName='name' placeholder="Digite o seu nome..." formControlName="name" #name>
+        <div *ngIf="qst === 1">
+            <input formControlName='name' placeholder="Digite o seu nome..." formControlName="name"  #name>
+            <mat-error *ngIf="name.value === null">Nome é necessário</mat-error>
+        </div>
         <br>
         <span *ngIf="qst === 2" class="questions-format slide-up">ola {{ nome }}! Qual a sua idade?</span>
         <br>
@@ -16,11 +19,6 @@
             Continuar
             <mat-icon class="icon">east</mat-icon>
         </button>
-
-        <!-- <button *ngIf="qst === 2" routerLink="/form/question">
-            Continuar
-            <mat-icon class="icon">east</mat-icon>
-        </button> -->       
-    </div>   
+    </div>
 </div>
 <app-question *ngIf="qst === 3" [nome]="nome"></app-question>
