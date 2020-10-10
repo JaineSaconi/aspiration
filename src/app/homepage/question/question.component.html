@@ -6,8 +6,8 @@
 
   <div fxLayout="column" class="format-group">
 
-    <span class="q1" *ngIf="1 >= question">{{ nome }}, você tem tido</span>
-    <span class="q2" *ngIf="1 >= question">Dores de cabeça por tensão?</span>
+    <span class="q1" *ngIf="1 == question">{{ nome }}, você tem tido</span>
+    <span class="q2" *ngIf="1 == question">Dores de cabeça por tensão?</span>
 
     <span class="q1" *ngIf="question === 2">Com que frequência você</span>
     <span class="q2" *ngIf="question === 2">Sentido insonia e fadiga?</span>

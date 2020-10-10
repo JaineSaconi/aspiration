@@ -48,7 +48,7 @@ export class ResultComponent implements OnInit {
       this.resultFinal = this.ar;
 
     if (this.result == 2)
-      this.resultFinal = this.ar;
+      this.resultFinal = this.fogo;
 
     if (this.result == 3)
       this.resultFinal = this.agua;
@@ -57,7 +57,7 @@ export class ResultComponent implements OnInit {
       this.resultFinal = this.terra;
 
     if (this.result == 5) {
-      if (this.xQuestionWater > this.xQuestionAir) {
+      if (this.xQuestionWater >= this.xQuestionAir) {
         this.resultFinal = this.agua;
       } else {
         this.resultFinal = this.ar;
@@ -65,7 +65,7 @@ export class ResultComponent implements OnInit {
     }
 
     if (this.result == 6) {
-      if (this.xQuestionWater > this.xQuestionEarth) {
+      if (this.xQuestionWater >= this.xQuestionEarth) {
         this.resultFinal = this.agua;
       } else {
         this.resultFinal = this.terra;
@@ -73,31 +73,31 @@ export class ResultComponent implements OnInit {
     }
 
     if (this.result == 7) {
-      if (this.xQuestionFire > this.xQuestionEarth) {
-        this.resultFinal = this.ar;
+      if (this.xQuestionFire >= this.xQuestionEarth) {
+        this.resultFinal = this.fogo;
       } else {
         this.resultFinal = this.terra;
       }
     }
 
     if (this.result == 8) {
-      if (this.xQuestionFire > this.xQuestionEarth) {
-        this.resultFinal = this.ar;
+      if (this.xQuestionFire >= this.xQuestionAir) {
+        this.resultFinal = this.fogo;
       } else {
-        this.resultFinal = this.terra;
+        this.resultFinal = this.ar;
       }
     }
 
     if (this.result == 9) {
-      if (this.xQuestionFire > this.xQuestionWater) {
-        this.resultFinal = this.ar;
+      if (this.xQuestionFire >= this.xQuestionWater) {
+        this.resultFinal = this.fogo;
       } else {
         this.resultFinal = this.agua;
       }
     }
 
     if (this.result == 10) {
-      if (this.xQuestionAir > this.xQuestionEarth) {
+      if (this.xQuestionAir >= this.xQuestionEarth) {
         this.resultFinal = this.ar;
       } else {
         this.resultFinal = this.terra;
@@ -136,8 +136,7 @@ export class ResultComponent implements OnInit {
         this.resultFinal = this.fogo;
       else if (this.xQuestionAir > this.xQuestionFire && this.xQuestionAir >= this.xQuestionEarth)
         this.resultFinal = this.ar;
-      else
-      
+      else      
         this.resultFinal = this.terra;
     }
 
@@ -155,15 +154,25 @@ export class ResultComponent implements OnInit {
   }
 
   expand(): void {
-    var  texto = $('campoTexto');
+    var  texto = $('#campoTexto');
 
     var div = $('#sizeDiv');
 
     if( div.hasClass('text-size-hidden')){
         div.removeClass('text-size-hidden');
         div.addClass('text-size-expand');
+    } else {
+      div.removeClass('text-size-expand');
+      div.addClass('text-size-hidden');
     }
 
+    if( texto.hasClass('hidden-text')) {
+      texto.removeClass('hidden-text');
+      texto.addClass('show-text');
+    } else {
+      texto.removeClass('show-text');
+      texto.addClass('hidden-text');
+    }    
   }
 
 }

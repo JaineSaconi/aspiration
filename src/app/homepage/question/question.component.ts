@@ -28,6 +28,7 @@ export class QuestionComponent {
   constructor() { }
 
   answer(answerCliked: number): void {
+
     if (this.question < 6) {
       if (this.question === 1) {
         this.xQuestionAir = answerCliked === 3 ? 4 : answerCliked;
@@ -122,8 +123,7 @@ export class QuestionComponent {
 
   return(): void {
     this.question--;
-
-    if (this.question != 0) {
+    if (this.question >= 1) {
       if (this.question < 6) {
         if (this.question === 1 && this.answerNow === 3)
           this.air = this.air - 4;
@@ -263,5 +263,11 @@ export class QuestionComponent {
         this.percent = 100;
         break;
     }
+
+    // console.log('ar:', this.air);
+    // console.log('Terra:', this.earth);
+    // console.log('fogo:', this.fire);
+    // console.log('agua:', this.water);
+
   }
 }

@@ -92,7 +92,6 @@
 }
 
 .text-size {
-    
     background-color: white;
     margin-top: 1em;
     border-radius: 1em;
@@ -104,8 +103,9 @@
     height: 17.438em;
 }
 .text-size-expand {
-    height: 50em;
+    height: 54em;
 }
+
 .text {
     text-align: left;
     font-family: 'Open Sans';
@@ -123,12 +123,13 @@
 .hidden-text {
     height: 2.6em;
     overflow: hidden;
+    margin: 0 3em 1em 0
 }
 
 .show-text {
     height: 30em;
+    margin: 0 3em 2em 0;
 }
-
 
 .btn-ler-mais {
     position: absolute;
